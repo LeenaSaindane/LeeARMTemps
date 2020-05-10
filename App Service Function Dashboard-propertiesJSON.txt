@@ -1,0 +1,267 @@
+{
+  "properties": {
+    "lenses": {
+      "0": {
+        "order": 0,
+        "parts": {
+          "0": {
+            "position": {
+              "x": 0,
+              "y": 0,
+              "colSpan": 6,
+              "rowSpan": 4
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "sharedTimeRange",
+                  "isOptional": true
+                },
+                {
+                  "name": "options",
+                  "value": {
+                    
+"chart": {
+                      
+"metrics": [
+                        
+{
+                          
+"resourceMetadata": {
+                            
+"id": "/subscriptions/75a113a8-c434-44d5-96f8-f4ed4aec1e90/resourceGroups/rg-WebApp/providers/Microsoft.Web/sites/test-WebAppServ"
+                          },
+                          
+"name": "AverageResponseTime",
+                          
+"aggregationType": 4,
+                          
+"namespace": "microsoft.web/sites",
+                          
+"metricVisualization": 
+{
+                            
+"displayName": "Average Response Time",
+                           
+ "resourceDisplayName": 
+"test-WebAppServ"
+                          }
+                        },
+                        {
+                         
+ "resourceMetadata": {
+                            
+"id": "/subscriptions/75a113a8-c434-44d5-96f8-f4ed4aec1e90/resourceGroups/rg-WebApp/providers/Microsoft.Web/sites/test-WebAppServ"
+                          },
+                          
+"name": "BytesReceived",
+                          
+"aggregationType": 7,
+                          
+"namespace": "microsoft.web/sites",
+                          
+"metricVisualization": 
+{
+                            
+"displayName": "Data In",
+                            
+"resourceDisplayName": "test-WebAppServ"
+                          }
+                        },
+                        {
+                          "resourceMetadata": {
+                           
+ "id": "/subscriptions/75a113a8-c434-44d5-96f8-f4ed4aec1e90/resourceGroups/rg-WebApp/providers/Microsoft.Web/sites/test-WebAppServ"
+                          },
+
+                          
+"name": "BytesSent",
+                          
+"aggregationType": 7,
+                          
+"namespace": "microsoft.web/sites",
+                         
+ "metricVisualization": 
+{
+                            
+"displayName": "Data Out",
+                           
+ "resourceDisplayName": "test-WebAppServ"
+                          }
+                        }
+ 
+                     ],
+ 
+                     
+"title": "Web App Service Metrics",
+                      
+"titleKind": 2,
+                      
+"visualization": 
+{
+                        
+"chartType": 1,
+                        
+"legendVisualization": {
+                         
+ "isVisible": true,
+                          
+"position": 2,
+                          "hideSubtitle": true
+                        },
+                        "axisVisualization": {
+                          "x": {
+                            "isVisible": true,
+                            "axisType": 2
+                          },
+                          "y": {
+                            "isVisible": true,
+                            "axisType": 1
+                          }
+                        }
+                      },
+                      "timespan": {
+                        "relative": {
+                          "duration": 604800000
+                        },
+                        "showUTCTime": false,
+                        "grain": 1
+                      }
+                    }
+                  },
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+              "settings": {
+                "content": {
+                  "options": {
+                    "chart": {
+                      "metrics": [
+                        {
+                          "resourceMetadata": {
+                            
+"id": "/subscriptions/75a113a8-c434-44d5-96f8-f4ed4aec1e90/resourceGroups/rg-WebApp/providers/Microsoft.Web/sites/test-WebAppServ"
+                          },
+                          "name": "AverageResponseTime",
+                          "aggregationType": 4,
+                          "namespace": "microsoft.web/sites",
+                          "metricVisualization": {
+                            "displayName": "Average Response Time",
+                            "resourceDisplayName": "test-WebAppServ"
+                          }
+                        },
+                        {
+                          "resourceMetadata": {
+                           
+ "id": "/subscriptions/75a113a8-c434-44d5-96f8-f4ed4aec1e90/resourceGroups/rg-WebApp/providers/Microsoft.Web/sites/test-WebAppServ"
+                          },
+                          "name": "BytesReceived",
+                          "aggregationType": 7,
+                          "namespace": "microsoft.web/sites",
+                          "metricVisualization": {
+                            "displayName": "Data In",
+                            "resourceDisplayName": "test-WebAppServ"
+                          }
+                        },
+                        {
+                          "resourceMetadata": {
+                            
+"id": "/subscriptions/75a113a8-c434-44d5-96f8-f4ed4aec1e90/resourceGroups/rg-WebApp/providers/Microsoft.Web/sites/test-WebAppServ"
+                          },
+                          "name": "BytesSent",
+                          "aggregationType": 7,
+                         
+ "namespace": "microsoft.web/sites",
+                          "metricVisualization": {
+                            "displayName": "Data Out",
+                            "resourceDisplayName": "test-WebAppServ"
+                          }
+                        }
+                      ],
+                      
+"title": "Web App Service Metrics",
+                      "titleKind": 2,
+                      "visualization": {
+                        "chartType": 1,
+                        "legendVisualization": {
+                          "isVisible": true,
+                          "position": 2,
+                          "hideSubtitle": true
+                        },
+                        "axisVisualization": {
+                          "x": {
+                            "isVisible": true,
+                            "axisType": 2
+                          },
+                          "y": {
+                            "isVisible": true,
+                            "axisType": 1
+                          }
+                        },
+                        "disablePinning": true
+                      }
+                    }
+                  }
+                }
+              },
+              "filters": {
+                "MsPortalFx_TimeRange": {
+                  "model": {
+                    "format": "local",
+                    "granularity": "auto",
+                    "relative": "10080m"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "model": {
+        "timeRange": {
+          "value": {
+            "relative": {
+              "duration": 24,
+              "timeUnit": 1
+            }
+          },
+          "type": "MsPortalFx.Composition.Configuration.ValueTypes.TimeRange"
+        },
+        "filterLocale": {
+          "value": "en-us"
+        },
+        "filters": {
+          "value": {
+            "MsPortalFx_TimeRange": {
+              "model": {
+                "format": "utc",
+                "granularity": "auto",
+                "relative": "3d"
+              },
+              "displayCache": {
+                "name": "UTC Time",
+                "value": "Past 3 days"
+              },
+              "filteredPartIds": [
+                
+"StartboardPart-MonitorChartPart-97aac254-8df9-46b7-b34c-0980d3edf0aa"
+ 
+             ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "name": "App Service Function Dashboard",
+  
+"type": "Microsoft.Portal/dashboards",
+  "location": "INSERT LOCATION",
+  "tags": {
+    "hidden-title": "App Service Function Dashboard"
+  },
+  "apiVersion": "2015-08-01-preview"
+}
