@@ -1,0 +1,12 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "dashboards_998d038e_446c_4968_8080_b839d1fe2d06_name": {
+            "value": null
+        },
+        "sites_test_WebAppServ_externalid": {
+            "value": null
+        }
+    }
+}

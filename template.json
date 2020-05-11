@@ -1,0 +1,130 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "dashboards_998d038e_446c_4968_8080_b839d1fe2d06_name": {
+            "defaultValue": "998d038e-446c-4968-8080-b839d1fe2d06",
+            "type": "String"
+        },
+        "sites_test_WebAppServ_externalid": {
+            "defaultValue": "/subscriptions/75a113a8-c434-44d5-96f8-f4ed4aec1e90/resourceGroups/rg-WebApp/providers/Microsoft.Web/sites/test-WebAppServ",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Portal/dashboards",
+            "apiVersion": "2019-01-01-preview",
+            "name": "[parameters('dashboards_998d038e_446c_4968_8080_b839d1fe2d06_name')]",
+            "location": "Central US",
+            "tags": {
+                "hidden-title": "App Service Function Dashboard"
+            },
+            "properties": {
+                "lenses": {
+                    "0": {
+                        "order": 0,
+                        "parts": {
+                            "0": {
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "rowSpan": 4,
+                                    "colSpan": 6
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {
+                                            "name": "sharedTimeRange",
+                                            "isOptional": true
+                                        },
+                                        {
+                                            "name": "options",
+                                            "value": {
+                                                "chart": {
+                                                    "metrics": [
+                                                        {
+                                                            "resourceMetadata": {
+                                                                "id": "[parameters('sites_test_WebAppServ_externalid')]"
+                                                            },
+                                                            "name": "AverageResponseTime",
+                                                            "aggregationType": 4,
+                                                            "namespace": "microsoft.web/sites",
+                                                            "metricVisualization": {
+                                                                "displayName": "Average Response Time",
+                                                                "resourceDisplayName": "test-WebAppServ"
+                                                            }
+                                                        },
+                                                        {
+                                                            "resourceMetadata": {
+                                                                "id": "[parameters('sites_test_WebAppServ_externalid')]"
+                                                            },
+                                                            "name": "BytesReceived",
+                                                            "aggregationType": 7,
+                                                            "namespace": "microsoft.web/sites",
+                                                            "metricVisualization": {
+                                                                "displayName": "Data In",
+                                                                "resourceDisplayName": "test-WebAppServ"
+                                                            }
+                                                        },
+                                                        {
+                                                            "resourceMetadata": {
+                                                                "id": "[parameters('sites_test_WebAppServ_externalid')]"
+                                                            },
+                                                            "name": "BytesSent",
+                                                            "aggregationType": 7,
+                                                            "namespace": "microsoft.web/sites",
+                                                            "metricVisualization": {
+                                                                "displayName": "Data Out",
+                                                                "resourceDisplayName": "test-WebAppServ"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "title": "Web App Service Metrics",
+                                                    "titleKind": 2,
+                                                    "visualization": {
+                                                        "chartType": 1,
+                                                        "legendVisualization": {
+                                                            "isVisible": true,
+                                                            "position": 2,
+                                                            "hideSubtitle": true
+                                                        },
+                                                        "axisVisualization": {
+                                                            "x": {
+                                                                "isVisible": true,
+                                                                "axisType": 2
+                                                            },
+                                                            "y": {
+                                                                "isVisible": true,
+                                                                "axisType": 1
+                                                            }
+                                                        }
+                                                    },
+                                                    "timespan": {
+                                                        "relative": {
+                                                            "duration": 604800000
+                                                        },
+                                                        "showUTCTime": false,
+                                                        "grain": 1
+                                                    }
+                                                }
+                                            },
+                                            "isOptional": true
+                                        }
+                                    ],
+                                    "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                                    "settings": {},
+                                    "filters": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "metadata": {
+                    "model": {}
+                }
+            }
+        }
+    ]
+}
